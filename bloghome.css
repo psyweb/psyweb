@@ -1,0 +1,258 @@
+
+/* navbar */
+.navbar{
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background-color: #0009;
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+}
+
+.brand{
+  font-size: 1.5rem;
+  margin: .5rem;
+}
+.navl ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navl li{
+  list-style: none;
+  transition: 0.5s all;
+}
+.navl li a{
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+.navl li a:hover{
+  color: antiquewhite;
+}
+.toggle-button{
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31px;
+  height: 21px;
+}
+.toggle-button .bar{
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 2px;
+}
+@media (max-width: 600px) {
+  .toggle-button{
+    display: flex;
+  }
+  .navl{
+    display: none;
+    width: 100%;
+  }
+  .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navl ul{
+    width: 100%;
+    flex-direction: column;
+  }
+  .navl li{
+    text-align: center;
+  }
+  .navl li a{
+    padding: .5rem 1rem;
+    display: inline;
+  }
+  .navl.active{
+    display: flex;
+  }
+}
+
+ul:hover li a{
+  transform: scale(1);
+  opacity: .2;
+  filter: blur(.7);
+}
+ul li a:hover{
+  transform: scale(1.25);
+  opacity: 1;
+  filter: blur(0);
+  color: black;
+}
+
+/* preloader */
+
+img#load { display: block; margin-left: auto; margin-right: auto; }
+#load{
+  height: 100px;
+  width: 100px;
+  padding-bottom: 50px;
+  margin-left: 50px;
+  margin-top: 250px;
+
+  width: 150px;
+  height: 150px;
+  /* position: absolute;
+  left: 50%;
+  top: 150%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px; */
+}
+.loader_bg{
+  position: fixed;
+  /* z-index: 9999999; */
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.loader{
+
+animation: changeimage 10s infinite linear;
+animation-direction: normal;
+animation-delay: 0;
+animation-duration: 8s;
+
+}
+@keyframes changeimage {
+  0%{transform: scale(1);}
+ /* 25%{transform: scale(1.2);} */
+  50%{transform: scale(1.4);}
+  /* 75%{transform: scale(1.2);} */
+  100%{transform: scale(1);}
+  /* from{transform: scale(1);}
+  to{transform: scale(2);} */
+
+}
+body{
+  top: 0;
+  margin: 0;
+  padding: 0;
+  background-color: bisque;
+  font-family: 'Bree Serif', sans-serif;
+}
+.card{
+  position: relative;
+  height: 450px;
+  width: 900px;
+  margin: 200px auto;
+  background: #fff;
+  box-shadow: 7px 7px 50px 0px rgba(0,0, 0, 0.7);
+}
+.thumbnail{
+  float: left;
+  position: relative;
+  left: 30px;
+  top: -7px;
+  height: 237px;
+  width: 190px;
+  box-shadow: 8px 8px 50px 0px rgba(0,0, 0, 0.7);
+  overflow: hidden;
+}
+img.left{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 10%;
+  height: 100%;
+}
+.right1{
+  margin-left: 250px;
+  margin-right: 20px;
+}
+
+h1{
+  padding-top: 15px;
+  font-size: 1.3em;
+  color: #4b4b4b;
+}
+.author{    
+  background: teal;
+  height: 30px;
+  width: 114px;
+  border-radius: 20px;
+}
+.author>img{
+  padding-top: 0px;
+  margin-left: 20px;
+  float: left;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+h2{
+  padding-top: 8px;
+  margin-right: 6px;
+  text-align: right;
+  font-size: .8rem;
+  color: #fff;
+}
+p{
+  text-align: justify;
+  padding-top: 10px;
+  font-size: .99rem;
+  line-height: 150%;
+  color: #4b4b4b;
+
+}
+/* h5{
+  position: absolute
+  left: 30px;
+  bottom: -125%;
+  font-size: 6rem;
+  color: #c3c3c3;
+}
+h6{
+  position: absolute;
+  left: 30px;
+  bottom: -55%;
+  font-size: 2rem;
+  color: #c3c3c3;
+} */
+.thumbnail2{
+  float: left;
+  position: relative;
+  left: 30px;
+  top: -15px;
+  height: 237px;
+  width: 190px;
+  box-shadow: 8px 8px 50px 0px rgba(0,0, 0, 0.7);
+  overflow: hidden;
+
+}
+.thumbnail3{
+  float: left;
+  position: relative;
+  left: 30px;
+  top: -5px;
+  height: 237px;
+  width: 190px;
+  box-shadow: 8px 8px 50px 0px rgba(0,0, 0, 0.7);
+  overflow: hidden;
+
+}
+#logo1{
+  height: 10%;
+  width: 10%;
+}

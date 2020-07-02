@@ -1,0 +1,305 @@
+*{
+  box-sizing: border-box;
+
+}
+body{
+  margin: 0;
+  padding: 0px;
+  background-color:#909396;;
+  list-style-type: none;
+  font-family: 'Bree Serif', sans-serif;
+}
+
+.navbar{
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background-color: #0005;
+  color: white;
+  position: fixed;
+  width: 100%;
+}
+.brand{
+  font-size: 1.5rem;
+  margin: .5rem;
+}
+.navl ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navl li{
+  list-style: none;
+  transition: 0.5s all;
+}
+.navl li a{
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+.navl li a:hover{
+  color: antiquewhite;
+}
+.toggle-button{
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31px;
+  height: 21px;
+}
+.toggle-button .bar{
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 2px;
+}
+@media (max-width: 600px) {
+  .toggle-button{
+    display: flex;
+  }
+  .navl{
+    display: none;
+    width: 100%;
+  }
+  .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navl ul{
+    width: 100%;
+    flex-direction: column;
+  }
+  .navl li{
+    text-align: center;
+  }
+  .navl li a{
+    padding: .5rem 1rem;
+    display: inline;
+  }
+  .navl.active{
+    display: flex;
+  }
+}
+
+ul:hover li a{
+  transform: scale(1);
+  opacity: .2;
+  filter: blur(.7);
+}
+ul li a:hover{
+  transform: scale(1.25);
+  opacity: 1;
+  filter: blur(0);
+  color: black;
+}
+
+
+
+
+.left-col{
+  float: left;
+  width: 75%;
+  padding-left: 20px;
+
+}
+.right-col{
+  float: right;
+  width: 25%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.card{
+  padding: 20px;
+  background-color: white;
+  margin-top: 20px;
+  border: 20px solid balck;
+  border-radius: 4px;
+
+
+}
+
+.card img{
+  width: 100%;
+}
+.card ul{
+  display: inline-block;
+  margin: 0;
+}
+
+.card ul li{
+
+  list-style-type: none;
+}
+
+/* .profile:hover{
+  transform:scale(1.2);
+
+} */
+/* .profile{
+  border: 200px solid balck;
+} */
+img#load { display: block; margin-left: auto; margin-right: auto; }
+#load{
+  height: 80px;
+  width: 80px;
+  padding-bottom: 50px;
+  margin-left: 50px;
+  margin-top: 250px;
+
+  width: 150px;
+  height: 150px;
+  /* position: absolute;
+  left: 50%;
+  top: 150%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px; */
+}
+.loader_bg{
+  position: fixed;
+  z-index: 9999999;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.loader{
+
+animation: changeimage 10s infinite linear;
+animation-direction: normal;
+animation-delay: 0;
+animation-duration: 3s;
+
+}
+@keyframes changeimage {
+  0%{transform: scale(1);}
+ /* 25%{transform: scale(1.2);} */
+  50%{transform: scale(1.4);}
+  /* 75%{transform: scale(1.2);} */
+  100%{transform: scale(1);}
+  /* from{transform: scale(1);}
+  to{transform: scale(2);} */
+
+}
+p{
+  font-size: 1.1rem;
+}
+
+/* .ratings{
+  width: 300px;
+  margin-left: 60px auto;
+  color: black;
+}
+.ratings li{
+  margin: 20px 0;
+
+}
+.bar{
+  background: #353b48;
+  display: block;
+  height: 10px;
+
+  border: 3px solid rgba(0,0,0,0,2);
+  border-radius: 2px ;
+  overflow: hidden;
+  box-shadow: 0 0 5px white;
+}
+.bar span{
+  height: 10px;
+  float: left;
+  background: yellow;
+}
+.direction{
+  width: 50%;
+  animation: direction 5s;
+}
+.screenplay{
+  width: 50%;
+  animation: screenplay 5s;
+}
+.cinematography{
+  width: 50%;
+  animation: cinematography 5s;
+
+}
+.cast{
+  width: 50%;
+  animation: cast 5s;
+}
+.overall{
+  width: 50%;
+  animation: overall 5s;
+}
+
+@keyframes direction {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 50%;
+  }
+
+}
+@keyframes screenplay {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 50%;
+  }
+
+}
+@keyframes cinematography {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 50%;
+  }
+
+}
+@keyframes cast {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 50%;
+  }
+
+}
+@keyframes overall {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 50%;
+  }
+
+} */
+/* @keyframes direction {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 50%;
+  }
+
+} */
+#ob{
+  padding-left: 5px;
+}
+#wri{
+  padding-left: 30px;
+}
